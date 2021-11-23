@@ -16,3 +16,6 @@ class CustomUser(AbstractUser):
     gender = models.CharField(max_length=1, choices=gender_options, default="M")
     social_status = models.CharField(max_length=10, choices=status, default="Single")
 
+    def __str__(self) -> str:
+        return self.username
+
